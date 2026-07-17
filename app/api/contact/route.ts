@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         // Email to the recipient (research@ovuns.tech)
         const mailOptions = {
             from: process.env.CONTACT_EMAIL_USER,
-            to: 'research@ovuns.tech',
+            to: 'ec.echeonwu@gmail.com',
             subject: `Contact Form: ${name} from ${organization || 'Unknown Organization'}`,
             html: `
         <h2>New Contact Form Submission</h2>
