@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
             },
         });
 
-        // Email to the recipient (research@ovuns.tech)
+        // Email to the recipient (ec.echeonwu@gmail.com)
         const mailOptions = {
             from: process.env.CONTACT_EMAIL_USER,
             to: 'ec.echeonwu@gmail.com',
