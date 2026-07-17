@@ -9,14 +9,14 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email Inquiry',
-      value: 'research@ovuns.tech',
-      href: 'mailto:research@ovuns.tech',
+      value: 'ec.echeonwu@gmail.com',
+      href: 'mailto:ec.echeonwu@gmail.com',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn Profile',
-      value: 'linkedin.com/company/ovuns-tech',
-      href: 'https://linkedin.com',
+      value: 'linkedin.com/in/eecheonwu01',
+      href: 'www.linkedin.com/in/eecheonwu01',
     },
     {
       icon: Github,
