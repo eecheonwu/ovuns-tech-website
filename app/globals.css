@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-primary: #183153;
+  --color-brand-accent: #E63946;
+  --color-brand-surface: #F7F9FC;
+  --color-brand-text: #222222;
+  --color-brand-muted: #6B7280;
+
+  --color-brand-dark-bg: #0A0F1D;
+  --color-brand-dark-surface: #131B2E;
+  --color-brand-dark-text: #F3F4F6;
+  --color-brand-dark-muted: #9CA3AF;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+/* Custom scrollbar and focus rings to look premium */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-brand-text font-sans antialiased transition-colors duration-300;
+  }
+  
+  body.dark {
+    @apply bg-brand-dark-bg text-brand-dark-text;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-accent ring-offset-2;
+  }
+}
+
+/* Custom CSS utilities for subtle premium touches */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glassmorphism {
+  background: rgba(10, 15, 29, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #183153 30%, #E63946 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, #F3F4F6 40%, #E63946 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
